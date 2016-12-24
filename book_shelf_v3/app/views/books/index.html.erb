@@ -1,7 +1,11 @@
 <h2>書籍一覧</h2>
-<% @books.each do |book| %>
-  <li>
+<ul>
+  <% @books.each do |book| %>
+    <li>
       <%= book.name %>
-      <%= link_to "詳細", book_path(book) %>
-  </li>
-<% end %>
+      <%= link_to '詳細', book_path(book)  %>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to '新規追加', new_book_path %></p>
