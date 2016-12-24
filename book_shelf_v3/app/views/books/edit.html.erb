@@ -1,0 +1,10 @@
+<h2>書籍詳細</h2>
+<p>ID: <%= @book.id %></p>
+<p>書籍名: <%= @book.name %></p>
+<p>価格: <%= @book.price %></p>
+<p>出版社: <%= @book.publish %></p>
+<p>刊行日<%= @book.publish_date %></p>
+
+<hr>
+<%= link_to '編集', edit_book_path(@book) %>
+<%= link_to '削除', book_path(@book), method: :delete %>
